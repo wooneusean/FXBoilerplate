@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+            prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="win.woon.fxboilerplate.MainController">
+    <center>
+        <VBox spacing="8.0" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="14.0" left="14.0" right="14.0" top="14.0"/>
+            </padding>
+            <Label text="Binding in FXML"/>
+            <TextField fx:id="ftFXMLBinding"/>
+            <Label maxWidth="1.7976931348623157E308" style="-fx-border-color: gray; -fx-border-radius: 3px;"
+                   text="${ftFXMLBinding.text}"/>
+            <Separator prefWidth="200.0"/>
+            <Label text="Binding programmatically"/>
+            <TextField fx:id="ftProgrammaticBinding1"/>
+            <TextField fx:id="ftProgrammaticBinding2"/>
+            <Separator prefWidth="200.0"/>
+            <Label text="Binding to Controller in FXML"/>
+            <HBox spacing="8.0">
+                <TextField fx:id="ftFXMLControllerBinding" maxHeight="1.7976931348623157E308"
+                           maxWidth="1.7976931348623157E308" text="${controller.controllerBinding}"
+                           HBox.hgrow="ALWAYS"/>
+                <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                        onAction="#changeValue" text="Change Value"/>
+            </HBox>
+            <Label text="Binding to Controller programmatically"/>
+            <TextField fx:id="ftProgrammaticControllerBinding"/>
+            <Label text="Binding to ViewModel programmatically"/>
+            <TextField fx:id="ftProgrammaticViewModelBinding"/>
+        </VBox>
+    </center>
+</BorderPane>
